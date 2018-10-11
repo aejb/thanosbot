@@ -18,21 +18,20 @@ class shellcog:
         word_site = "http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain"
         response = requests.get(word_site)
         self.wordslist = response.text.splitlines()
-        bot.loop.create_task(self.tomsagayshit())
+        bot.loop.create_task(self.thanos())
 
-    async def tomsagayshit(self):
+    async def thanos(self):
         print(1)
         await self.bot.wait_until_ready()
         print(2)
         while not self.bot.is_closed():
             print(3)
-            # do tomsagayshit
             #print(type(wordslist))
             #print(random.choice(wordslist))
             word=(random.choice(self.wordslist))
             content=("thanos "+word+"\nthanos "+word)
             await self.bot.get_channel(499898214099582976).send(content)
-            await asyncio.sleep(5)
+            await asyncio.sleep(60)
 
 
 def setup(bot):
