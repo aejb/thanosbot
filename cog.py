@@ -31,7 +31,7 @@ class shellcog:
             word=(random.choice(self.wordslist))
             content=("thanos "+word+"\nthanos "+word)
             await self.bot.get_channel(499898214099582976).send(content)
-            await asyncio.sleep(20)
+            await asyncio.sleep(40)
 
 
 def setup(bot):
