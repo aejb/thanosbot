@@ -1,11 +1,7 @@
-__authors__ = 'electric-blue-green'
 __license__ = 'MIT'
 __status__ = 'Prototype'
 import discord
 from discord.ext import commands
-import sqlite3
-import os
-import subprocess
 import time
 import requests
 import asyncio
@@ -32,7 +28,6 @@ class shellcog:
             content=("thanos "+word+"\nthanos "+word)
             await self.bot.get_channel(499898214099582976).send(content)
             await asyncio.sleep(3600)
-
 
 def setup(bot):
     bot.add_cog(shellcog(bot))
