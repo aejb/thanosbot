@@ -21,11 +21,10 @@ class shellcog:
         bot.loop.create_task(self.thanos())
 
     async def thanos(self):
-        print(1)
+        #print(1)
         await self.bot.wait_until_ready()
-        print(2)
+        #print(2)
         while not self.bot.is_closed():
-            print(3)
             #print(type(wordslist))
             #print(random.choice(wordslist))
             word=(random.choice(self.wordslist))
